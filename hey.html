@@ -7,7 +7,38 @@
         #hey{
             text-align: center;
         }
+        #pocket{
+            color: rgb(255, 0, 200);
+            font-size: 20px;
+        }
     </style>
     <h1 id="hey">project </h1>
+    <span id="pocket">enter your pocket money :</span>
+    <input type="number" id="money">
+    <br>
+    
+    <br>
+
+    <span id="pocket">enter your expences : </span>
+    <input type="number" id="expence">
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <button onclick="calculate()">Calculate Balance</button>
+
+    <div class="result" id="result"></div>
+
+    <script>
+        function calculate() {
+            const money = parseFloat(document.getElementById('money').value);
+            const expence = parseFloat(document.getElementById('expence').value);
+            document.getElementById('result').innerHTML = money - expence;
+        }
+
+        
+    </script>
+    
 
 </html>
